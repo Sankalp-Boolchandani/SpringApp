@@ -10,7 +10,7 @@ import java.util.Optional;
 public interface StudentRepository extends JpaRepository<Student, Long> {
 
     // what is does is creates an query in the DB that finds all the students with the given email
-    // something like:= SELECT * FROM student where email=?
+    // something like:= SELECT * FROM student where email=? || custom query
     Optional<Student> findAllByEmail(String email);
 
 }
