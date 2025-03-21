@@ -14,10 +14,10 @@ import java.util.List;
 public class StudentConfig {
 
     @Bean           // bean makes sure that the below runs on the start of the server and creates object and saves in the DB
-    CommandLineRunner commandLineRunner(StudentRepository repository){
-        return args->{
-
-            Student san=new Student(
+    CommandLineRunner commandLineRunner(StudentRepository repository){              // commandLineRunner runs the underlying piece of code
+        return args->{                                                      // on the start of the application using the command like itself
+                                                                                    // combined with bean annotation, it creates 2 student objects
+            Student san=new Student(                                                // on the start of the application
                     "Sankalp",
                     "san@gmail.com",
                     LocalDate.of(1999, Month.NOVEMBER, 18)
